@@ -1,0 +1,29 @@
+body {
+	background: #D4E6F1;
+}
+
+.blue {
+	color: blue;
+}
+
+.hulkify {
+	font-size: 2em;
+}
+
+.border {
+	border: 2px solid gold;
+	height: 30px;
+	padding: 10px;
+}
+
+.rounding {
+	border-radius: 20px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
