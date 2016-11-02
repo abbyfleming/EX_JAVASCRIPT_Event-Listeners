@@ -11,7 +11,6 @@ input.addEventListener("keyup", function(){
     output.innerHTML = userInput;
 });
 
-
 /* --- ADD COLOR --- */
 
 var addColorBtn = document.getElementById("add-color");
@@ -21,7 +20,6 @@ function makeBlue(){
 }
 
 addColorBtn.addEventListener("click", makeBlue);
-
 
 /* --- MAKE LARGER --- */
 
@@ -43,7 +41,6 @@ function addBorder() {
 
 borderBtn.addEventListener("click", addBorder);
 
-
 /* --- ADD ROUNDING --- */
 
 var roundingBtn = document.getElementById("add-rounding");
@@ -54,7 +51,6 @@ function addRounding() {
 
 roundingBtn.addEventListener("click", addRounding);
 
-
 /* --- BOLD --- */
 
 var section = document.getElementsByTagName("section");
@@ -64,18 +60,9 @@ function addBold() {
 	section[5].classList.add("bold", "italic");
 }
 
-window.addEventListener("load", addBold) ; 
-
-
-/* --- SECTION CLICK --- */
-//When any section is clicked the output target text should be "You clicked on the {text of the section} section"
-
-//output.innerHTML = "You clicked on the " "x" " section.";
-
+window.addEventListener("load", addBold); 
 
 /* --- MOUSEOVER --- */
-// When the mouse is over the h1 tag, the output element should contain the text "You moved your mouse over the header".
-// When the mouse leaves the h1 tag, the output element should contain the text "You left me!!".
 
 var heading = document.getElementById("page-title");
 
@@ -86,6 +73,22 @@ heading.addEventListener("mouseover", function(){
 heading.addEventListener("mouseout", function(){
 	output.innerHTML = "You left me!!"
 });
+
+/* --- SECTION CLICK --- */
+//When any section is clicked the output target text should be "You clicked on the {text of the section} section"
+
+//output.innerHTML = "You clicked on the " "x" " section.";
+
+/* --- BLOCK ELEMENTS --- */
+var buttons = document.getElementsByTagName("button");
+
+function addBlock(){
+	for (i = 0; i < buttons.length; i++) {
+	buttons[i].classList.add("buttonBlock");
+	}
+};
+
+window.addEventListener("load", addBlock);
 
 
 
