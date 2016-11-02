@@ -19,6 +19,7 @@ var addColorBtn = document.getElementById("add-color");
 function makeBlue(){
 	GuineaPig.classList = "blue";
 }
+
 addColorBtn.addEventListener("click", makeBlue);
 
 
@@ -29,6 +30,7 @@ var hulkBtn = document.getElementById("make-large");
 function hulkify(){
 	GuineaPig.classList = "hulkify";
 }
+
 hulkBtn.addEventListener("click", hulkify);
 
 /* --- MAKE BORDER --- */
@@ -53,27 +55,18 @@ function addRounding() {
 roundingBtn.addEventListener("click", addRounding);
 
 
-/* --- BUBBLING --- */
-//The order is called a bubbling order, because an event bubbles from the innermost element up through parents, like a bubble of air in the water.
-//The first section's text should be bold.
-//The last section's text should be bold and italicized.
+/* --- BOLD --- */
 
-// var sections = document.getElementsByTagName("section");
-// var article = document.getElementsByClassName("article-section");
+var section = document.getElementsByTagName("section");
 
-// function bold() {
-// 	article.classList.add("bold");
-// 	console.log("bold");
-// }
- 
-// for(var i=0; i<sections.length; i++) {
-//   sections[i].addEventListener("load", bold, true);
-//   console.log("It's loading the section " + i);
-// };
+function addBold() {
+	section[0].classList = "bold";
+	section[5].classList.add("bold", "italic");
+}
+
+window.addEventListener("load", addBold) ; 
 
 
-
-/* --- MOUSEOVER --- */
 
 
 
