@@ -27,3 +27,7 @@ body {
 .italic {
 	font-style: italic;
 }
+
+.buttonBlock {
+	display: block;
+}
