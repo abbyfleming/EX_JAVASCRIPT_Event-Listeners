@@ -1,4 +1,4 @@
-var pageTitle = document.getElementById("page-title");
+
 var output = document.getElementById("output-target");
 var input = document.getElementById("keypress-input");
 var GuineaPig = document.getElementById("guinea-pig");
@@ -67,6 +67,25 @@ function addBold() {
 window.addEventListener("load", addBold) ; 
 
 
+/* --- SECTION CLICK --- */
+//When any section is clicked the output target text should be "You clicked on the {text of the section} section"
+
+//output.innerHTML = "You clicked on the " "x" " section.";
+
+
+/* --- MOUSEOVER --- */
+// When the mouse is over the h1 tag, the output element should contain the text "You moved your mouse over the header".
+// When the mouse leaves the h1 tag, the output element should contain the text "You left me!!".
+
+var heading = document.getElementById("page-title");
+
+heading.addEventListener("mouseover", function(){
+	output.innerHTML = "You moved your mouse over the header";
+});
+
+heading.addEventListener("mouseout", function(){
+	output.innerHTML = "You left me!!"
+});
 
 
 
